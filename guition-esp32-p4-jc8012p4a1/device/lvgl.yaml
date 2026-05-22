@@ -50,15 +50,15 @@ lvgl:
             height: 130 #$button_height
             width: 200 #$button_width
             #text: "Modo da Porta"
-            options: |
-              Bidirecional
-              Fechada
-              Apenas Saida
-              Aberta
+            options:
+              - "Bidirecional"
+              - "Fechada"
+              - "Apenas Saida"
+              - "Aberta"
             on_value:
               then:
                 - select.select_option:
-                    id: portaprincipal_seletor_de_modo
+                    id: seletor_modo_display
                     option: !lambda 'return x;'
       
         # Office Features Scene
