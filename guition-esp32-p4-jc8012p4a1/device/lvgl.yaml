@@ -57,7 +57,7 @@ lvgl:
               Aberta
             on_value:
               then:
-                - homeassistant.select.select_option:
+                - select.select_option:
                     id: portaprincipal_seletor_de_modo
                     option: !lambda 'return x;'
       
