@@ -45,6 +45,18 @@ lvgl:
       pad_right: 5
       
       widgets:
+
+        - dropdown:
+          id: dropdown_modo
+          height: $button_height
+          width: $button_width
+          text: "Modo da Porta"
+          options: "Bidirecional\nFechada\nApenas Saida\nAberta"
+          on_value_changed:
+            then:
+              - homeassistant.select.select_option:
+                  id: porta_entrada_modo
+                  option: !lambda 'return x;'
       
         # Office Features Scene
         - button: 
@@ -407,7 +419,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: network_rack_label
-                  text: "Network Rack"
+                  text: "Porta!!"
             on_click:
               - homeassistant.service:
                   service: light.toggle
