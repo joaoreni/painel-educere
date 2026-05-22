@@ -57,9 +57,11 @@ lvgl:
               - "Aberta"
             on_value:
               then:
-                - select.select_option:
-                    id: seletor_modo_display
-                    option: !lambda 'return x;'
+                - homeassistant.service:
+                    service: select.select_option
+                    data:
+                      entity_id: select.portaprincipal_seletor_de_modo
+                      option: !lambda 'return x;'
       
         # Office Features Scene
         - button: 
