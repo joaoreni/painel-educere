@@ -45,17 +45,20 @@ lvgl:
       pad_right: 5
       
       widgets:
-
         - dropdown:
             id: dropdown_modo
-            height: $button_height
-            width: $button_width
-            text: "Modo da Porta"
-            options: "Bidirecional\nFechada\nApenas Saida\nAberta"
-            on_value_changed:
+            height: 130 #$button_height
+            width: 200 #$button_width
+            #text: "Modo da Porta"
+            options: |
+              Bidirecional
+              Fechada
+              Apenas Saida
+              Aberta
+            on_value:
               then:
                 - homeassistant.select.select_option:
-                    id: porta_entrada_modo
+                    id: portaprincipal_seletor_de_modo
                     option: !lambda 'return x;'
       
         # Office Features Scene
