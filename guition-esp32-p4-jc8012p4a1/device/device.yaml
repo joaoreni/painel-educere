@@ -82,23 +82,25 @@ i2c:
     scl_pullup_enabled: False
 
 # Touchscreen
-#touchscreen:
-#  - platform: gsl3680
-#    id: my_touchscreen
-#    reset_pin: GPIO22
-#    interrupt_pin: GPIO21
-#    transform:
-#      swap_xy: false
-#      mirror_x: false
-#      mirror_y: true
-#    on_release:
-#      then:
-#        - if:
-#            condition: lvgl.is_paused
-#            then:
-#              - light.turn_on: display_backlight
-#              - lvgl.resume:
-#              - lvgl.widget.redraw:
+touchscreen:
+  - platform: gsl3680
+    id: my_touchscreen
+    i2c_id: i2c_bus_a
+    reset_pin: GPIO22
+    interrupt_pin: GPIO21
+    setup_priority: -300
+    transform:
+      swap_xy: false
+      mirror_x: true
+      mirror_y: false
+    on_release:
+      then:
+        - if:
+            condition: lvgl.is_paused
+            then:
+              - light.turn_on: display_backlight
+              - lvgl.resume:
+              - lvgl.widget.redraw:
 
 # Display
 display:
