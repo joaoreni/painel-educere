@@ -46,8 +46,9 @@ logger:
 
 # External components
 external_components:
-  - source: github://kvj/esphome@jd9365_gsl3680
-    components: [gsl3680]
+  - source: local
+    path: components
+    #components: [gsl3680]
 
 # Power management
 esp_ldo:
