@@ -2,7 +2,6 @@
 esp32:
   variant: ESP32P4
   flash_size: 16MB
-  #platform_version: ${esp_idf_version}
   engineering_sample: true
   framework:
     type: esp-idf
@@ -15,7 +14,6 @@ esphome:
   friendly_name: ${friendly_name}
   area: ${room}
   platformio_options:
-    platform: espressif32 @ 6.9.0
     board_build.flash_mode: dio
 
 # Secondary ESP32-C6 device for connectivity
