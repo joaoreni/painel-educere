@@ -158,7 +158,7 @@ esphome::i2c::ErrorCode GSL3680::read_ram() {
 }
 
 
-void GSL3680::update_touches() {
+void IRAM_ATTR GSL3680::update_touches() {
     uint16_t x[TOUCH_MAX_POINTS];
     uint16_t y[TOUCH_MAX_POINTS];
     uint16_t touch_strength[TOUCH_MAX_POINTS];
