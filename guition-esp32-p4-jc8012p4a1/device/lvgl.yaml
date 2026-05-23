@@ -3,7 +3,7 @@ lvgl:
   byte_order: little_endian
   rotation: 180
   displays: my_display
-  touchscreens: my_touchscreen
+  #touchscreens: my_touchscreen
 
   top_layer:
     widgets:
