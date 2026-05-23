@@ -46,9 +46,12 @@ logger:
 
 # External components
 external_components:
-  - source: local
-    path: components
-    #components: [gsl3680]
+  - source:
+      type: git
+      url: https://github.com/joaoreni/painel-educere
+      ref: main
+    components: [gsl3680]
+    refresh: 0s
 
 # Power management
 esp_ldo:
