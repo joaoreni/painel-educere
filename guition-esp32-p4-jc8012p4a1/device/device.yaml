@@ -2,7 +2,7 @@
 esp32:
   variant: ESP32P4
   flash_size: 16MB
-  platform_version: 6.9.0
+  platform_version: ${esp_idf_version}
   engineering_sample: true
   framework:
     type: esp-idf
