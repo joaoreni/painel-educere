@@ -14,7 +14,7 @@ esphome:
   friendly_name: ${friendly_name}
   area: ${room}
   platformio_options:
-    platform: espressif32 @ 7.0.0
+    #platform: espressif32 @ 7.0.0
     board_build.flash_mode: dio
 
 # Secondary ESP32-C6 device for connectivity
