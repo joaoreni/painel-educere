@@ -94,7 +94,7 @@ touchscreen:
     i2c_id: i2c_bus_a
     reset_pin: GPIO22
     interrupt_pin: GPIO21
-    setup_priority: -300
+    #setup_priority: -300
     transform:
       swap_xy: false
       mirror_x: true
