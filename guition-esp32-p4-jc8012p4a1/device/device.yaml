@@ -1,6 +1,5 @@
 # Designed for guition-esp32-p4-jc8012p4a1
 esp32:
-  board: esp32-p4
   variant: ESP32P4
   flash_size: 16MB
   engineering_sample: true
@@ -15,7 +14,7 @@ esphome:
   friendly_name: ${friendly_name}
   area: ${room}
   platformio_options:
-    platform: espressif32 @ 6.13.0
+    platform: espressif32 @ 7.0.0
     board_build.flash_mode: dio
 
 # Secondary ESP32-C6 device for connectivity
