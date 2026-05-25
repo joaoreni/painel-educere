@@ -6,6 +6,8 @@ namespace gsl3680 {
 #define STOP_ON_I2C_ERROR(code, value) code = value; if (code != esphome::i2c::ERROR_OK) { ESP_LOGE(TAG, "I2C Error: %d", code); return code; }
 
 void GSL3680::setup() {
+	
+	esphome::delay(2000);
 
     ESP_LOGD(TAG, "Setup start");
     this->x_raw_max_ = this->swap_x_y_? this->get_display()->get_native_height(): this->get_display()->get_native_width() ;
