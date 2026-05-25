@@ -15,6 +15,7 @@ esphome:
   area: ${room}
   platformio_options:
     #platform: espressif32 @ 7.0.0
+    platform: https://github.com/pioarduino/platform-espressif32.git@55.03.37
     board_build.flash_mode: dio
 
 # Secondary ESP32-C6 device for connectivity
