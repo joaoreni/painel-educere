@@ -25,8 +25,8 @@ void GSL3680::setup() {
         return;
     }
 
-    this->interrupt_pin_->pin_mode(gpio::FLAG_INPUT | gpio::FLAG_PULLUP);
-    this->interrupt_pin_->setup();
+    //this->interrupt_pin_->pin_mode(gpio::FLAG_INPUT | gpio::FLAG_PULLUP);
+    //this->interrupt_pin_->setup();
     //this->attach_interrupt_(this->interrupt_pin_, gpio::INTERRUPT_FALLING_EDGE);
 
     gsl_DataInit(gsl_config_data_id);
@@ -160,7 +160,7 @@ esphome::i2c::ErrorCode GSL3680::read_ram() {
 }
 
 
-void IRAM_ATTR GSL3680::update_touches() {
+void GSL3680::update_touches() {
     uint16_t x[TOUCH_MAX_POINTS];
     uint16_t y[TOUCH_MAX_POINTS];
     uint16_t touch_strength[TOUCH_MAX_POINTS];
